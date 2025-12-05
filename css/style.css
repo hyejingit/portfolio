@@ -101,7 +101,7 @@ body {
     -ms-overflow-style: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: auto;
-    background-image: url(/images/background-topographic.png);
+    background-image: url(../images/background-topographic.png);
     background-size: contain;
 }
 ul, ol {
@@ -436,7 +436,7 @@ header .nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(/images/hero-bg.png);
+  background-image: url(../images/hero-bg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -662,7 +662,7 @@ section .section-subtext {
     position: relative;
     width: 100%;
     padding: 60px 20px;
-    background: url(/images/desktop-view.svg) no-repeat center;
+    background: url(../images/desktop-view.svg) no-repeat center;
     background-size: contain;
   }
   
