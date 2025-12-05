@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OHHYEJIN portfolio</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png" />
+  <link type="text/css" rel="stylesheet" href="./css/style.css" />
+  <script src="https://kit.fontawesome.com/6c1713f6bf.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#">OHHYEJIN</a>
+        <div class="nav">
+            <a href="#section01">Work</a>
+            <a href="#section05">Contact</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main">
+            <div class="hero">
+                <div>
+                    <h4>Hello! <br>I'm Hyejin, <br class="mo">a UX/UI designer.<br>based in Seoul</h4>
+                    <p>I turn small observations into meaningful visual stories, <br>valuing simplicity, curiosity, and user-centered experiences.</p>
+                </div>
+                <img src="" alt="">
+            </div>
+
+            <div class="intro">
+                <ul>
+                    <li class="profile">
+                        <img src="/images/profile-img.jpg" alt="증명사진">
+                        <div>
+                            <p>오혜진 (吳慧振)</p>
+                            <p>1996.02.10</p>
+                            <p>서울특별시 서초구</p>
+                            <p>contact.hyejin@gmail.com</p>
+                        </div>
+                        <hr style="height: 50px;border: 1px solid #e6e6e6;">
+                        <div>
+                            <span>디자인에는 정답이 없다고들 말합니다.<br>
+                                하지만 표준과 암묵적인 룰은 존재합니다. 컨셉에 따라 디자인은 달라지는데, <br>저는 그 ‘다름’을 감각적으로 해석하고자 합니다.<br>
+                                정부·공공기관 과제와 SI 기반 시스템 UI를 설계하며, 사용자 흐름을 기반으로 구조·반응형·비주얼 디자인을 종합적으로 구축해왔습니다.<br>
+                                사용자가 <strong>‘쉽게 이해하고 자연스럽게 경험하는 디자인’</strong>을 지향합니다.
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="skill">
+                    <li>
+                        <div class="skill-info">
+                            <img src="/images/icon-adobe-illustrator.svg" alt="illustrator icon">
+                            <p>Adobe Illustrator</p>
+                        </div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star gray"></i>
+                        </div>
+                        <span>아이콘, 백터, 인포그래픽 등 다양한 비주얼 제작 경험</span>
+                    </li>
+                    <li>
+                        <div class="skill-info">
+                            <img src="/images/icon-adobe-photoshop.svg" alt="photoshop icon">
+                            <p>Adobe photoshop</p>
+                        </div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star gray"></i>
+                        </div>
+                        <span>이미지 보정, 합성 및 디테일한 그래픽 요소 최적화</span>
+                    </li>
+                    <li>
+                        <div class="skill-info">
+                            <img src="/images/icon-figma.svg" alt="figma icon">
+                            <p>figma</p>
+                        </div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star gray"></i>
+                        </div>
+                        <span>UX/UI시안, 프로토타입 제작이 가능하며, 협업 툴로 효율적인 활용</span>
+                    </li>
+                    <li>
+                        <div class="skill-info">
+                            <img src="/images/icon-vscode.svg" alt="VS code icon">
+                            <p>VS Code</p>
+                        </div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star gray"></i>
+                        </div>
+                        <span>Html/css 환경에서 사용, 시멘틱 태그와 웹 접근성을 고려한 페이지 제작 경험</span>
+                    </li>
+                </ul>
+            
+            </div>
+        </div>
+        
+        <div class="section-wrap">
+            <!-- section01 -->
+            <section id="section01">
+                <div>
+                    <p class="section-title">다양한 맞춤<br>UX・UI</p>
+                    <p class="section-subtext">사용자 니즈에 맞춘 직관적 인터페이스를 구축합니다.</p>
+                </div>
+                <!-- 탭 메뉴 -->
+                <ul class="tab_menu">
+                    <li class="active" data-tab="web"><i class="fa-solid fa-desktop"></i><p>Web</p></li>
+                    <li data-tab="app"><i class="fa-solid fa-mobile"></i><p>App</p></li>
+                    <span class="tab_slider"></span>
+                </ul>
+
+                <!-- Web 탭 -->
+                <div class="tab active" id="web">
+                    <div class="slider" id="slider-web">
+                        <div class="slides">
+                            <div class="slide"><img src="./images/국가과제-1.png" alt="web1"></div>
+                            <div class="slide"><img src="./images/국가과제-2.png" alt="web2"></div>
+                            <div class="slide"><img src="./images/국가과제-3.png" alt="web3"></div>
+                            <div class="slide"><img src="./images/국가과제-4.png" alt="web4"></div>
+                        </div>
+                        <div class="dots"></div>
+                    </div>
+
+                    <div class="project-desc">
+                        <p><b>[ 정부·공공기관 과제 iBEEMS 자동제어 시스템(2024) ]</b></p>
+                        <span>
+                            - 역할: 전 화면 UI・UX 디자인<br>
+                            - 주요성과: 데이터 가독성 향상 및 정보 계층 구조 설계, 설비·기계·건물·도면 등 시각화 일러스트 제작<br>
+                            <span class="text-dim">(실제 내용은 비공개이므로 예시 화면으로 재구성하였습니다.)</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- App 탭 -->
+                <div class="tab" id="app">
+                    <div class="slider" id="slider-app">
+                        <div class="slides">
+                            <div class="slide"><img src="./images/뱅킹서비스-1.png" alt="app1"></div>
+                            <div class="slide"><img src="./images/뱅킹서비스-2.png" alt="app2"></div>
+                            <div class="slide"><img src="./images/뱅킹서비스-3.png" alt="app3"></div>
+                            <div class="slide"><img src="./images/뱅킹서비스-4.png" alt="app4"></div>
+                        </div>
+                        <div class="dots"></div>
+                    </div>
+
+                    <div class="project-desc">
+                        <p><b>[ 뱅킹 서비스 앱 ]</b></p>
+                        <span>
+                            - 역할: 전체 화면 디자인 및 사용자 경험 설계<br>
+                            - 주요 성과: 계좌 및 거래 정보 가독성 향상, 직관적 사용자 흐름 설계, 시각적 아이콘·컴포넌트 디자인<br>
+                            <span class="text-dim">(포트폴리오용 컨셉 프로젝트입니다.)</span>
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- section02 -->
+            <section class="section02">
+                <div>
+                  <p class="section-title">유연한 반응형<br>디바이스</p>
+                  <p class="section-subtext">모든 화면에서 최적화된 경험 제공합니다.</p>
+                </div>
+              
+                <div class="section02-area">
+                  <div class="responsive-demo">
+
+                    <div class="frame-wrapper">
+                      <div class="frame-skeleton" aria-hidden="true">
+                          <div class="line-layout">
+                              <div class="line01">
+                                  <div class="box"></div>
+                                  <div class="box"></div>
+                              </div>
+                              <p>Devices Auto Layout</p>
+                              <div class="box resize" style="width: 180px;"></div>
+                              <div class="box resize" style="width: 280px;"></div>
+                              <div class="line02">
+                                  <div class="box"></div>
+                                  <div class="box"></div>
+                                  <div class="box"></div>
+                                  <div class="box"></div>
+                                  <div class="box"></div>
+                                  <div class="box"></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="handlebar"><div class="micro"></div></div>
+                      <div class="info-toast">화면을 제어해보세요.</div>
+                    </div>
+                    
+                  </div>
+                </div>
+            </section>
+
+            <!-- section03 -->
+            <section class="section03">
+                <div>
+                    <p class="section-title">유지보수<br>어드민 페이지</p>
+                    <p class="section-subtext">관리자가 쉽게 사용할 수 있도록 가독성과 디자인을 고려하여 설계합니다.</p>
+                </div>
+                <div class="section03-area">
+                    <img src="images/admin-img.png" alt="admin img" style="width: 100%; opacity: 0.8;">
+                    <div class="form-container">
+                        <div class="modal-header"><p>사용자 등록</p><i class="fa-solid fa-xmark"></i></div>
+                        <form action="/submit" method="POST">
+                            <div class="form-area">
+                                <!-- 사용자 ID -->
+                                <div class="form-group">
+                                    <label for="userId">사용자 ID</label>
+                                    <input type="text" id="userId" name="userId" value="ohhyejin" required>
+                                </div>
+                                <!-- 소속명 -->
+                                <div class="form-group">
+                                    <label for="affiliation">소속명</label>
+                                    <input type="text" id="affiliation" name="affiliation" placeholder="회사나 기관명 입력" required>
+                                </div>
+                                <!-- Name -->
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" value="오혜진" placeholder="홍길동" required>
+                                </div>
+                                <!-- 상태 -->
+                                <div class="form-group">
+                                    <label for="status">상태</label>
+                                    <select id="status" name="status" required>
+                                        <option value="">선택하세요</option>
+                                        <option value="active">활성</option>
+                                        <option value="inactive">비활성</option>
+                                    </select>
+                                </div>
+                                <!-- 유형 -->
+                                <div class="form-group">
+                                    <label for="type">유형</label>
+                                    <select id="type" name="type" required>
+                                        <option value="">선택하세요</option>
+                                        <option value="all">All</option>
+                                        <option value="admin">UX・UI design</option>
+                                        <option value="user">Publishing</option>
+                                    </select>
+                                </div>
+                                <!-- 이메일 -->
+                                <div class="form-group">
+                                    <label for="email">이메일</label>
+                                    <input type="email" id="email" name="email" value="contact.hyejin@gmail.com" placeholder="example@example.com" required>
+                                </div>
+                            </div>
+                        
+                            <!-- 버튼 영역 -->
+                            <div class="form-buttons">
+                                <button type="button" onclick="history.back()">취소</button>
+                                <button type="submit" id="submitBtn">등록</button>
+                                <img src="/images/cursor.svg" alt="cursor image">
+                            </div>
+                        </form>
+                        <div id="toast" class="toast">등록되었습니다.(샘플)</div>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- section04 -->
+            <section>
+                <p class="section-title">Career Summary</p>
+                <div class="table-container">
+                    <table class="project-table">
+                        <thead>
+                        <tr>
+                            <th style="width: 330px;">사업명</th>
+                            <th style="width: 160px;">참여기간</th>
+                            <th>담당업무</th>
+                            <th>발주처</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>문서통합관리 인터페이스 관리시스템</td>
+                            <td>2025.07 - 2025.08</td>
+                            <td>디자인</td>
+                            <td>BC카드</td>
+                        </tr>
+                        <tr>
+                            <td>소보법 메일템플릿 리뉴얼</td>
+                            <td>2025.06 - 2025.07</td>
+                            <td>Publishing / 디자인</td>
+                            <td>NICE페이먼츠</td>
+                        </tr>
+                        <tr>
+                            <td>PAYU 간편결제 고도화</td>
+                            <td>2025.06 - 2025.07</td>
+                            <td>Publishing / 디자인</td>
+                            <td>NICE페이먼츠</td>
+                        </tr>
+                        <tr>
+                            <td>SCT/Tools 개발</td>
+                            <td>2025.01 - 2025.05</td>
+                            <td>Publishing / 디자인</td>
+                            <td>Seegene</td>
+                        </tr>
+                        <tr>
+                            <td>Smart ILS</td>
+                            <td>2025.02 - 2025.04</td>
+                            <td>디자인</td>
+                            <td>POSCO</td>
+                        </tr>
+                        <tr>
+                            <td>통합결제창 전자계약 고도화</td>
+                            <td>2024.12 - 2025.03</td>
+                            <td>디자인</td>
+                            <td>NICE페이먼츠</td>
+                        </tr>
+                        <tr>
+                            <td>Scaner Program</td>
+                            <td>2024.12 - 2025.01</td>
+                            <td>디자인</td>
+                            <td>서울지방고용노동청</td>
+                        </tr>
+                        <tr>
+                            <td>ECM 솔루션 관리자시스템</td>
+                            <td>2024.09 - 2024.11</td>
+                            <td>디자인</td>
+                            <td>코이웨어</td>
+                        </tr>
+                        <tr>
+                            <td>NICEPAY 비대면플랫폼 웹사이트 리뉴얼</td>
+                            <td>2024.08 - 2024.11</td>
+                            <td>디자인</td>
+                            <td>NICE페이먼츠</td>
+                        </tr>
+                        <tr>
+                            <td>NextQVAN 가맹점 모바일 신청 서비스 관리시스템</td>
+                            <td>2024.06 - 2024.08</td>
+                            <td>디자인</td>
+                            <td>모바일리더 (Mobile Leader)</td>
+                        </tr>
+                        <tr>
+                            <td>LG PSMS</td>
+                            <td>2024.04 - 2024.10</td>
+                            <td>Publishing / 디자인</td>
+                            <td>LG전자</td>
+                        </tr>
+                        <tr>
+                            <td>휴면 회원 예금관리시스템</td>
+                            <td>2023.12 - 2024.02</td>
+                            <td>Publishing / 디자인</td>
+                            <td>서민금융진흥원</td>
+                        </tr>
+                        <tr>
+                            <td>NVAN 가맹점 신청 간소화</td>
+                            <td>2023.11 - 2024.02</td>
+                            <td>Publishing / 디자인</td>
+                            <td>NICE정보통신</td>
+                        </tr>
+                        <tr>
+                            <td>자율운전 기반 지능형 건물 에너지, 환경통합관리시스템 (iBEEMS)</td>
+                            <td>2023.07 - 2023.10</td>
+                            <td>디자인</td>
+                            <td>정부과제</td>
+                        </tr>
+                        <tr>
+                            <td>Koiware AI homepage</td>
+                            <td>2022.10 - 2023.02</td>
+                            <td>Publishing / 디자인</td>
+                            <td>코이웨어</td>
+                        </tr>
+                        <tr>
+                            <td>나이스체크 매출정산 App</td>
+                            <td>2023.02 - 2023.08</td>
+                            <td>Publishing / 디자인</td>
+                            <td>NICE정보통신</td>
+                        </tr>
+                        <tr>
+                            <td>OCR</td>
+                            <td>2023.01 - 2023.04</td>
+                            <td>디자인</td>
+                            <td>코이웨어</td>
+                        </tr>
+                        <tr>
+                            <td>RMT 채팅번역 App</td>
+                            <td>2023.01 - 2023.02</td>
+                            <td>디자인</td>
+                            <td>코이웨어</td>
+                        </tr>
+                        <tr>
+                            <td>APPOS</td>
+                            <td>2022.10 - 2022.12</td>
+                            <td>디자인</td>
+                            <td>NICE페이먼츠</td>
+                        </tr>
+                        <tr>
+                            <td>AutoGen 학습데이터생성</td>
+                            <td>2022.04 - 2022.06</td>
+                            <td>Publishing / 디자인</td>
+                            <td>코이웨어</td>
+                        </tr>
+                        <tr>
+                            <td>LG FUT</td>
+                            <td>2022.01 - 2022.03</td>
+                            <td>Publishing / 디자인</td>
+                            <td>LG전자</td>
+                        </tr>
+                        <tr>
+                            <td>LG B2B 버티컬 솔루션</td>
+                            <td>2021.04 - 2021.05</td>
+                            <td>디자인</td>
+                            <td>LG전자</td>
+                        </tr>
+                        </tbody>
+                    </table>
+            </section>
+            <!-- section05 -->
+            <section id="section05" class="section05">
+                <p>Let’s create something meaningful together,<br>
+                   Thanks for reading.</p>
+                <a href="mailto:contact.hyejin@gmail.com" class="link" id="emailLink">
+                    <i class="fa-regular fa-envelope"></i>contact.hyejin@gmail.com
+                    <div id="tooltip">Copied to clipboard!</div>
+                </a>
+            </section>
+        </div>
+
+        <footer>
+            <p>© 2025 OHHYEJIN</p>
+        </footer>
+    </div>
+
+
+    <!-- script -->
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        /* ---------------- Tab switching ---------------- */
+        const tabs = document.querySelectorAll(".tab_menu li");
+        const tabContents = document.querySelectorAll(".tab");
+        const slider = document.querySelector(".tab_slider");
+
+        const moveSlider = (activeTab) => {
+            if (!activeTab || !slider) return;
+            const style = window.getComputedStyle(activeTab);
+            const marginLeft = parseFloat(style.marginLeft);
+            const marginRight = parseFloat(style.marginRight);
+            const left = activeTab.offsetLeft - marginLeft;
+            const width = activeTab.offsetWidth + marginLeft + marginRight;
+            slider.style.left = left + "px";
+            slider.style.width = width + "px";
+        };
+
+        // 초기 위치
+        requestAnimationFrame(() => moveSlider(document.querySelector(".tab_menu li.active")));
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+                const target = tab.dataset.tab;
+                if (!target) return;
+                tabs.forEach(t => t.classList.remove("active"));
+                tabContents.forEach(c => c.classList.remove("active"));
+                tab.classList.add("active");
+                document.getElementById(target)?.classList.add("active");
+                moveSlider(tab);
+            });
+        });
+
+        // 반응형 대응
+        window.addEventListener('resize', () => moveSlider(document.querySelector(".tab_menu li.active")));
+
+
+        /* ---------------- Slider logic ---------------- */
+        const initSlider = (id) => {
+            const sliderEl = document.getElementById(id);
+            if (!sliderEl) return;
+            const slides = sliderEl.querySelector(".slides");
+            const slideList = sliderEl.querySelectorAll(".slide");
+            const dotsContainer = sliderEl.querySelector(".dots");
+            if (!slides || !dotsContainer || slideList.length === 0) return;
+
+            let index = 0;
+
+            slideList.forEach((_, i) => {
+                const dot = document.createElement("div");
+                dot.className = "dot" + (i === 0 ? " active" : "");
+                dot.addEventListener("click", () => showSlide(i));
+                dotsContainer.appendChild(dot);
+            });
+            const dots = dotsContainer.querySelectorAll(".dot");
+
+            const showSlide = (i) => {
+                index = i;
+                slides.style.transform = `translateX(-${i * 100}%)`;
+                dots.forEach(d => d.classList.remove("active"));
+                dots[i]?.classList.add("active");
+            };
+
+            setInterval(() => showSlide((index + 1) % slideList.length), 5000);
+        };
+
+        initSlider("slider-web");
+        initSlider("slider-app");
+
+
+        /* ---------------- Section02 Drag Handle ---------------- */
+        const bar = document.querySelector('.handlebar');
+        const frame = document.querySelector('.responsive-demo');
+        if (bar && frame) {
+            let dragging = false;
+            bar.addEventListener('mousedown', () => dragging = true);
+            document.addEventListener('mouseup', () => dragging = false);
+            document.addEventListener('mousemove', (e) => {
+                if (!dragging) return;
+                const rect = frame.getBoundingClientRect();
+                let newWidth = Math.max(250, Math.min(e.clientX - rect.left, 900));
+                frame.style.width = `${newWidth}px`;
+                bar.style.right = `-${bar.offsetWidth / 2}px`;
+            });
+        }
+
+
+        /* ---------------- Section03 Form Toast ---------------- */
+        const form = document.querySelector("form");
+        const toast = document.getElementById("toast");
+        form && toast && form.addEventListener("submit", e => {
+            e.preventDefault();
+            toast.classList.add("show");
+            setTimeout(() => toast.classList.remove("show"), 3000);
+        });
+
+
+        /* ---------------- Section05 Email Copy ---------------- */
+        const emailLink = document.getElementById('emailLink');
+        const tooltip = document.getElementById('tooltip');
+
+        if (emailLink && tooltip) {
+            emailLink.addEventListener('click', e => {
+                e.preventDefault();
+                const email = 'contact.hyejin@gmail.com';
+                navigator.clipboard?.writeText(email).catch(() => fallbackCopy(email)) || fallbackCopy(email);
+
+                tooltip.classList.add('show');
+                setTimeout(() => tooltip.classList.remove('show'), 2000);
+            });
+
+            const fallbackCopy = text => {
+                const tempInput = document.createElement('input');
+                tempInput.value = text;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+            };
+        }
+
+    });
+    </script>
+
+
+</body>
+</html>
