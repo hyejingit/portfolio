@@ -425,7 +425,7 @@ header .nav a:hover {
   line-height: 0.8;
   text-shadow: 1px 3px 5px #444;
 }
-.hero h4 .mo {
+.mobile {
   display: none;
 }
 .hero {
@@ -858,6 +858,31 @@ section .section-subtext {
   color: #fff;
   box-shadow: 0px 4px 20px rgba(30, 33, 44, 0.7);
 }
+
+.mobile-none {
+  display: none;
+}
+.section03 .device .image {
+  background: url(../images/admin-img-1.png) no-repeat;
+  background-size: cover;
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: 280px;
+  border-radius: 16px;
+  animation: pcScroll 8s infinite;
+  animation-timing-function: cubic-bezier(1, 0.05, 0.1, 1);
+  position: absolute;
+  bottom: 30px;
+}
+.section03 .device .image:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+@keyframes pcScroll {
+    0%, 10% { background-position-y: 0%; }
+    100% {  background-position-y: 100%; }
+}
 /* section03-modal */
 .modal-header {
   display: flex;
@@ -1085,7 +1110,7 @@ footer {
     font-size: 0.9rem;
   }
   .hero {background-size: auto; margin: 0;}
-  br.mo {display: block;}
+  .mobile {display: block;}
   .intro {gap: 0;}
   .intro ul li {padding: 20px;}
   .intro ul.skill {display: grid; grid-template-columns: 1fr 1fr;}
