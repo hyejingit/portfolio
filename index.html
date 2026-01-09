@@ -18,7 +18,7 @@
         <a href="#">OHHYEJIN</a>
         <div class="nav">
             <a href="#section01">Work</a>
-            <a href="#section05">Contact</a>
+            <a href="#section06">Contact</a>
         </div>
     </header>
 
@@ -284,6 +284,34 @@
                 </section>
     
                 <!-- section04 -->
+                <section id="section04" class="section04">
+                    <div>
+                      <p class="section-title">UX Process <br class="mo">& Visual Design</p>
+                    </div>
+
+                    <ul class="other-design">
+                        <li>
+                             <button type="button" class="link" onclick="openModal('modal-prototype')">
+                                <img src="./images/btn-icon-propotype.svg" alt="icon">
+                                <p>Prototype</p>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="link" onclick="openModal('modal-brochure')">
+                                <img src="./images/btn-icon-brochure.svg" alt="icon">
+                                <p>Brochure</p>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="link" onclick="openModal('modal-promotion')">
+                                <img src="./images/btn-icon-event.svg" alt="icon">
+                                <p>Promotion・PR</p>
+                            </button>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- section05 -->
                 <section>
                     <p class="section-title">Career Summary</p>
                     <div class="table-container">
@@ -347,6 +375,7 @@
                             </tr>
                             <tr>
                                 <td>NICEPAY 비대면플랫폼 웹사이트 리뉴얼</td>
+                                <!-- <td><a href="https://start.nicepay.co.kr/">NICEPAY 비대면플랫폼 웹사이트 리뉴얼</a></td> -->
                                 <td>2024.08 - 2024.11</td>
                                 <td>디자인</td>
                                 <td>NICE페이먼츠</td>
@@ -432,8 +461,9 @@
                             </tbody>
                         </table>
                 </section>
-                <!-- section05 -->
-                <section id="section05" class="section05">
+
+                <!-- section06 -->
+                <section id="section06" class="section06">
                     <p>Let’s create something meaningful together,<br>
                        Thanks for reading.</p>
                     <a href="mailto:contact.hyejin@gmail.com" class="link" id="emailLink">
@@ -449,6 +479,145 @@
             <p>© 2025 OHHYEJIN</p>
         </footer>
     </div>
+
+
+
+    <!-- Modal : Prototype -->
+    <div class="modal" id="modal-prototype" role="dialog" aria-modal="true" aria-labelledby="modal" hidden>
+        <div class="modal-overlay" onclick="closeModal('modal-prototype')"></div>
+
+        <div class="modal-container" role="document">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modal-title">Prototype</h4>
+                <button type="button" class="modal-close" aria-label="Close modal" onclick="closeModal('modal-prototype')">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- contents -->
+             <div class="modal-video">
+                 <video class="prototype-video" autoplay loop muted playsinline preload="metadata" poster="prototype-poster.jpg">
+                     <source src="/images/video-prototype.mp4" type="video/mp4" />
+                     브라우저가 비디오를 지원하지 않습니다.
+                </video>
+                <p>- 본 프로젝트는 재직 당시 참여한 작업으로, 대외 공개된 정보 및 개인 작업물만을 기반으로 재구성되었습니다.</p>
+             </div>
+        </div>
+    </div>
+
+    <!-- Modal : Brochure -->
+    <div class="modal" id="modal-brochure" role="dialog" aria-modal="true" aria-labelledby="modal" hidden>
+        <div class="modal-overlay" onclick="closeModal('modal-brochure')"></div>
+
+        <div class="modal-container" role="document">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modal-title">Brochure</h4>
+                <button type="button" class="modal-close" aria-label="Close modal" onclick="closeModal('modal-brochure')">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- Tab Component -->
+            <div class="modal-tab" data-tab>
+                <!-- Tab List -->
+                <div class="modal-tab-list" role="tablist" aria-label="Brochure tabs">
+                    <button class="modal-tab-button is-active" role="tab" aria-selected="true" aria-controls="brochure-panel-1" id="brochure-tab-1" data-tab-button>
+                    01
+                    </button>
+                    <button
+                    class="modal-tab-button" role="tab" aria-selected="false" aria-controls="brochure-panel-2" id="brochure-tab-2" data-tab-button>
+                    02
+                    </button>
+                    <button
+                    class="modal-tab-button" role="tab" aria-selected="false" aria-controls="brochure-panel-3" id="brochure-tab-3" data-tab-button>
+                    03
+                    </button>
+                    <button
+                    class="modal-tab-button" role="tab" aria-selected="false" aria-controls="brochure-panel-4" id="brochure-tab-4" data-tab-button>
+                    04
+                    </button>
+                </div>
+
+                <!-- Tab Panels -->
+                <div class="modal-tab-panels">
+                    <div class="modal-tab-panel is-active" role="tabpanel" id="brochure-panel-1" aria-labelledby="brochure-tab-1" tabindex="0">
+                        <img src="./images/img-brochure-1.jpg" alt="브로슈어 1번 이미지">
+                    </div>
+                    <div class="modal-tab-panel" role="tabpanel" id="brochure-panel-2" aria-labelledby="brochure-tab-2" tabindex="0" hidden>
+                        <img src="./images/img-brochure-2.jpg" alt="브로슈어 2번 이미지">
+                    </div>
+                    <div class="modal-tab-panel" role="tabpanel" id="brochure-panel-3" aria-labelledby="brochure-tab-3" tabindex="0" hidden>
+                        <img src="./images/img-brochure-3.jpg" alt="브로슈어 3번 이미지">
+                    </div>
+                    <div class="modal-tab-panel" role="tabpanel" id="brochure-panel-4" aria-labelledby="brochure-tab-4" tabindex="0" hidden>
+                        <img src="./images/img-brochure-4.jpg" alt="브로슈어 4번 이미지">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal : Promotion,PR -->
+    <div class="modal" id="modal-promotion" role="dialog" aria-modal="true" aria-labelledby="modal" hidden>
+        <div class="modal-overlay" onclick="closeModal('modal-promotion')"></div>
+
+        <div class="modal-container" role="document">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modal-title">Promotion・PR</h4>
+                <button type="button" class="modal-close" aria-label="Close modal" onclick="closeModal('modal-promotion')">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- Tab Component -->
+            <div class="modal-tab" data-tab>
+                <!-- Tab List -->
+                <div class="modal-tab-list" role="tablist" aria-label="Promotion tabs">
+                    <button class="modal-tab-button is-active" role="tab" aria-selected="true" aria-controls="promotion-panel-1" id="promotion-tab-1" data-tab-button>
+                    01
+                    </button>
+                    <button
+                    class="modal-tab-button" role="tab" aria-selected="false" aria-controls="promotion-panel-2" id="promotion-tab-2" data-tab-button>
+                    02
+                    </button>
+                    <button
+                    class="modal-tab-button" role="tab" aria-selected="false" aria-controls="promotion-panel-3" id="promotion-tab-3" data-tab-button>
+                    03
+                    </button>
+                    <button
+                    class="modal-tab-button" role="tab" aria-selected="false" aria-controls="promotion-panel-4" id="promotion-tab-4" data-tab-button>
+                    04
+                    </button>
+                    <button
+                    class="modal-tab-button" role="tab" aria-selected="false" aria-controls="promotion-panel-5" id="promotion-tab-5" data-tab-button>
+                    05
+                    </button>
+                </div>
+
+                <!-- Tab Panels -->
+                <div class="modal-tab-panels">
+                    <div class="modal-tab-panel is-active" role="tabpanel" id="promotion-panel-1" aria-labelledby="promotion-tab-1" tabindex="0">
+                        <img src="./images/img-promotion-1.jpg" alt="프로모션 1번 이미지">
+                    </div>
+                    <div class="modal-tab-panel" role="tabpanel" id="promotion-panel-2" aria-labelledby="promotion-tab-2" tabindex="0" hidden>
+                        <img src="./images/img-promotion-2.jpg" alt="프로모션 2번 이미지">
+                    </div>
+                    <div class="modal-tab-panel" role="tabpanel" id="promotion-panel-3" aria-labelledby="promotion-tab-3" tabindex="0" hidden>
+                        <img src="./images/img-promotion-3.jpg" alt="프로모션 3번 이미지">
+                    </div>
+                    <div class="modal-tab-panel" role="tabpanel" id="promotion-panel-4" aria-labelledby="promotion-tab-4" tabindex="0" hidden>
+                        <img src="./images/img-promotion-4.jpg" alt="프로모션 4번 이미지">
+                    </div>
+                    <div class="modal-tab-panel" role="tabpanel" id="promotion-panel-5" aria-labelledby="promotion-tab-5" tabindex="0" hidden>
+                        <img src="./images/img-promotion-5.jpg" alt="프로모션 5번 이미지">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
 
     <!-- script -->
@@ -539,7 +708,6 @@
             });
         }
 
-
         /* ---------------- Section03 Form Toast ---------------- */
         const form = document.querySelector("form");
         const toast = document.getElementById("toast");
@@ -549,8 +717,7 @@
             setTimeout(() => toast.classList.remove("show"), 3000);
         });
 
-
-        /* ---------------- Section05 Email Copy ---------------- */
+        /* ---------------- Section06 Email Copy ---------------- */
         const emailLink = document.getElementById('emailLink');
         const tooltip = document.getElementById('tooltip');
 
@@ -575,6 +742,67 @@
         }
 
     });
+
+    /* ---------------- Modal open, close ---------------- */
+    function openModal(id) { 
+        var modal = document.getElementById(id); 
+        modal.style.display = 'block'; 
+        document.body.style.overflow = 'hidden'; 
+    } 
+    function closeModal(id) { 
+        var modal = document.getElementById(id); 
+        modal.style.display = 'none'; 
+        document.body.style.overflow = ''; 
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-tab]').forEach(tabRoot => {
+        const buttons = tabRoot.querySelectorAll('[data-tab-button]');
+        const panels = tabRoot.querySelectorAll('.modal-tab-panel');
+
+        buttons.forEach((button, index) => {
+        button.addEventListener('click', () => activateTab(button));
+
+        button.addEventListener('keydown', e => {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+            e.preventDefault();
+
+            const nextIndex =
+                e.key === 'ArrowRight'
+                ? (index + 1) % buttons.length
+                : (index - 1 + buttons.length) % buttons.length;
+
+            buttons[nextIndex].focus();
+            activateTab(buttons[nextIndex]);
+            }
+        });
+        });
+
+        function activateTab(activeButton) {
+        const targetId = activeButton.getAttribute('aria-controls');
+        const targetPanel = tabRoot.querySelector(`#${targetId}`);
+
+        buttons.forEach(btn => {
+            btn.classList.remove('is-active');
+            btn.setAttribute('aria-selected', 'false');
+        });
+
+        panels.forEach(panel => {
+            panel.classList.remove('is-active');
+            panel.hidden = true;
+        });
+
+        activeButton.classList.add('is-active');
+        activeButton.setAttribute('aria-selected', 'true');
+
+        targetPanel.hidden = false;
+        targetPanel.classList.add('is-active');
+        targetPanel.focus();
+        }
+    });
+    });
+
+
     </script>
 
 
