@@ -483,7 +483,8 @@ header .nav a:hover {
   font-weight: 500;
 }
 .intro ul li span {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
+  color: #323338;
 }
 .intro ul li.profile {
   display: flex;
@@ -538,7 +539,7 @@ section {
 section .section-title {
     color: var(--color-primary);
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: bold;
 }
 section .section-subtext {
     margin-top: 16px;
@@ -552,7 +553,7 @@ section .section-subtext {
     top: 30px;
     display: flex;
     align-items: center;
-    padding: 8px;
+    padding: 6px;
     background: #f2f2f2;
     border-radius: 30px;
     box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -576,8 +577,8 @@ section .section-subtext {
     display: inline-flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
-    padding: 12px 24px;
+    gap: 8px;
+    padding: 12px 20px;
     font-size: 0.875rem;
     border-radius: 20px;
     color: #999;
@@ -1044,7 +1045,7 @@ select {
   .project-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: rgba(0, 0, 0, 0.8);
     text-align: left;
   }
@@ -1281,6 +1282,19 @@ ul.list li .detail img {
   max-height: calc(100% - 90px);
   background-color: #bbb;
 }
+.modal-tab-panel {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  inset: 0;
+}
+
+.modal-tab-panel.is-active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+
 
 /* 이미지 */
 .modal-tab-panel img {
@@ -1323,14 +1337,13 @@ ul.list li .detail img {
   .hero {background-size: auto; margin: 0;}
   .mobile {display: block;}
   .intro {gap: 0;}
-  .intro ul li {padding: 20px;}
   .intro ul.skill {display: grid; grid-template-columns: 1fr 1fr;}
   .intro ul li.profile {margin: 24px 0; flex-direction: column; gap: 24px;}
   .intro hr {display: none;}
 
   section {padding: 30px 20px;}
   section .section-title {font-size: 1.5rem;}
-  section .section-subtext, .project-desc {font-size: 0.875rem;}
+  section .section-subtext, .project-desc, .project-desc i {font-size: 0.75rem;}
   #section01 .section-title {margin-top: 73px;}
   .tab_menu {right: auto;}
   .slide img {max-height: 300px;}
@@ -1344,7 +1357,13 @@ ul.list li .detail img {
   ul.other-design li button {padding: 24px;}
   ul.other-design li img {width: 30px;}
   .modal-container {max-width: 90%; height: max-content;}
-  .modal-tab-panel img {width: 100%;}
+  .modal-tab {height: max-content;}
+  .modal-tab-panel {max-height: inherit;}
   .modal-tab-panels {max-height: 500px;}
+  .modal-tab-panel img {width: 100%; padding: 10px;}
   .modal-video {padding: 30px 16px;}
+  .prototype-video {width: 100%;}
+  .modal-tab-button {padding: 8px 16px; font-size: 0.75rem;}
+  
+  .project-table {font-size: 0.75rem;}
 }
