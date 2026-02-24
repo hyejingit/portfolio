@@ -1,810 +1,768 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html class="dark" lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:image" content="">
-  <title>OHHYEJIN portfolio</title>
-  <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png" />
-  <link type="text/css" rel="stylesheet" href="./css/style.css" />
-  <script src="https://kit.fontawesome.com/6c1713f6bf.js" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>HYEJIN | UI/UX Designer Portfolio</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "primary": "#135bec",
+                            "background-light": "#f6f6f8",
+                            "background-dark": "#0a0a0c",
+                        },
+                        fontFamily: {
+                            "display": ["Inter", "sans-serif"]
+                        },
+                        borderRadius: {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                        },
+                    },
+                },
+            }
+        </script>
+    <style type="text/tailwindcss">
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .project-card:hover .overlay {
+            opacity: 1;
+        }
+        .project-card .overlay {
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .text-balance {
+            text-wrap: balance;
+        }
+        /* 필터링 시 부드러운 전환을 위한 전역 스타일 추가 */
+        .project-item {
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            cursor: pointer;
+        }
+        .filter-btn {
+            transition: all 0.4s ease;
+        }
+        /* color setting */
+        .text-primary {
+            color: rgb(80 200 178) !important;
+        }
+        .bg-primary {
+            background-color: rgb(80 200 178) !important;
+        }
+        .hover\:text-primary:hover {
+            color: rgb(80 200 178) !important;
+        }
+        .group:hover .group-hover\:text-blue-400 {
+            color: rgb(80 200 178) !important;
+        }
+        .group:hover .group-hover\:text-primary {
+            color: rgb(80 200 178) !important;
+        }
+        /* 가로 스크롤바 숨기기 */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 </head>
-
-<body>
-    <header>
-        <a href="#">OHHYEJIN</a>
-        <div class="nav">
-            <a href="#section01">Work</a>
-            <a href="#section06">Contact</a>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<header class="fixed top-0 w-full z-50 border-b border-black/5 dark:border-white/5 glass-nav bg-background-light/80 dark:bg-background-dark/50">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <img src="./images/favicon.png" style="filter: invert(1); width: 30px;">
+            <div class="flex flex-col">
+                <h2 class="text-sm font-black tracking-[0.2em] uppercase leading-none">Hyejin</h2>
+                <p class="text-[10px] font-medium uppercase tracking-widest mt-1">UX/UI Designer</p>
+            </div>
         </div>
-    </header>
+        <nav class="hidden md:flex items-center gap-10">
+            <a class="nav-link text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors text-primary" href="#home">Home</a>
+            <a class="nav-link text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#work">Work</a>
+            <a class="nav-link text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#about">About</a>
+            <a class="nav-link text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#contact">Contact</a>
+        </nav>
+        <div></div>
+    </div>
+</header>
 
-    <div class="container">
-        <div class="hero">
+<main>
+    <section class="pt-20 relative min-h-[90vh] flex items-end justify-center px-6 overflow-hidden bg-gradient-to-b from-transparent from-10% via-[#0a0a0c]/60 via-40% to-[#0a0a0c] to-80%" id="home">
+        <img src="./images/IMG_1636.jpg" class="absolute -z-10 w-full md:-top-[30%] max-w-7xl object-cover opacity-50 md:opacity-100" 
+            style="left: 50%; transform: translateX(-50%); min-height: 100%;">
+        <div class="relative z-10 max-w-5xl w-full text-center md:text-left">
+            <div class="mx-auto mb-24">
+                <p class="text-base md:text-xl text-slate-600 dark:text-slate-400 font-medium leading-relaxed mb-6 md:mb-8">
+                    Rooted in clarity, branching into experience!
+                </p>
+                <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-[5rem] font-bold tracking-tight leading-[1.1] md:leading-[0.95] text-balance">
+                    안녕하세요,<br class="md:hidden"> <span class="flex flex-col md:inline-flex md:flex-row md:items-center gap-4 md:gap-6 mt-4 md:mt-0">
+                        UX・UI 디자이너 
+                        <img src="./images/img-name.svg" alt="오혜진" class="w-[140px] sm:w-[180px] md:w-[200px] mx-auto md:mx-0 inline-block align-middle"/>
+                        입니다
+                    </span>
+                </h1>
+            </div>
+        </div>
+    </section>
+    <section class="max-w-7xl mx-auto px-6 py-24" id="work">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
             <div>
-                <h4>Hello! <br>I'm Hyejin, <br class="mo">a UX/UI designer,<br>based in Seoul.</h4>
-                <p>I turn small observations into meaningful visual stories, <br>valuing simplicity, curiosity, and user-centered experiences.</p>
+                <p class="text-primary font-bold text-xs tracking-[0.3em] uppercase mb-3">Selected Portfolio</p>
+                <h2 class="text-4xl md:text-5xl font-black tracking-tighter">Impactful Solutions</h2>
             </div>
-            <img src="" alt="">
+            <div class="h-px flex-grow mx-8 bg-black/5 dark:bg-white/5 hidden lg:block mb-4"></div>
+            <div class="flex gap-2 md:gap-3 overflow-x-auto pb-4 md:pb-0 scrollbar-hide flex-nowrap md:flex-wrap" id="filter-buttons">
+                <button data-filter="all" class="filter-btn active whitespace-nowrap px-6 py-2 text-[10px] md:text-xs font-bold uppercase tracking-widest border border-black/10 dark:border-white/10 rounded-full bg-primary text-white transition-all">All</button>
+                <button data-filter="medical" class="filter-btn whitespace-nowrap px-6 py-2 text-[10px] md:text-xs font-bold uppercase tracking-widest border border-black/10 dark:border-white/10 rounded-full hover:bg-primary hover:border-primary hover:text-white transition-all">Medical</button>
+                <button data-filter="fintech" class="filter-btn whitespace-nowrap px-6 py-2 text-[10px] md:text-xs font-bold uppercase tracking-widest border border-black/10 dark:border-white/10 rounded-full hover:bg-primary hover:border-primary hover:text-white transition-all">Fintech</button>
+                <button data-filter="other" class="filter-btn whitespace-nowrap px-6 py-2 text-[10px] md:text-xs font-bold uppercase tracking-widest border border-black/10 dark:border-white/10 rounded-full hover:bg-primary hover:border-primary hover:text-white transition-all">Other</button>
+            </div>
         </div>
 
-        <div class="main">
-            <div class="intro">
-                <ul>
-                    <li class="profile">
-                        <div class="profile01">
-                            <img src="./images/profile-img.jpg" alt="증명사진">
-                            <div>
-                                <p>오혜진 (吳慧振)</p>
-                                <p>1996.02.10</p>
-                                <p>서울특별시 서초구</p>
-                                <p>contact.hyejin@gmail.com</p>
-                            </div>
-                        </div>
-                        <hr style="height: 50px;border: 1px solid #e6e6e6;">
-                        <div class="profile02">
-                            <span>디자인에는 정답이 없다고들 말합니다.<br>
-                                하지만 표준과 암묵적인 룰은 존재합니다. 컨셉에 따라 디자인은 달라지는데, <br>저는 그 ‘다름’을 감각적으로 해석하고자 합니다.<br>
-                                정부·공공기관 과제와 SI 기반 시스템 UI를 설계하며, 사용자 흐름을 기반으로 구조·반응형·비주얼 디자인을 종합적으로 구축해왔습니다.<br>
-                                사용자가 <strong>‘쉽게 이해하고 자연스럽게 경험하는 디자인’</strong>을 지향합니다.
-                            </span>
-                        </div>
-                    </li>
-                </ul>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 transition-all duration-500" id="project-grid">
 
-                <ul class="skill">
-                    <li>
-                        <div class="skill-info">
-                            <img src="./images/icon-adobe-illustrator.svg" alt="illustrator icon">
-                            <p>Adobe Illustrator</p>
-                        </div>
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star gray"></i>
-                        </div>
-                        <span>아이콘, 백터, 인포그래픽 등 다양한 비주얼 제작 경험</span>
-                    </li>
-                    <li>
-                        <div class="skill-info">
-                            <img src="./images/icon-adobe-photoshop.svg" alt="photoshop icon">
-                            <p>Adobe photoshop</p>
-                        </div>
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star gray"></i>
-                        </div>
-                        <span>이미지 보정, 합성 및 디테일한 그래픽 요소 최적화</span>
-                    </li>
-                    <li>
-                        <div class="skill-info">
-                            <img src="./images/icon-figma.svg" alt="figma icon">
-                            <p>figma</p>
-                        </div>
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star gray"></i>
-                        </div>
-                        <span>UX/UI시안, 프로토타입 제작이 가능하며, 협업 툴로 효율적인 활용</span>
-                    </li>
-                    <li>
-                        <div class="skill-info">
-                            <img src="./images/icon-vscode.svg" alt="VS code icon">
-                            <p>VS Code</p>
-                        </div>
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star gray"></i>
-                        </div>
-                        <span>Html/css 환경에서 사용, 시멘틱 태그와 웹 접근성을 고려한 페이지 제작 경험</span>
-                    </li>
-                </ul>
+            <div class="project-item group relative overflow-hidden rounded-3xl bg-slate-100 dark:bg-white/5 aspect-[16/11] transition-all duration-500"
+                data-category="medical"
+                data-detail-title="Seegene: Medical Web UI System Optimization"
+                data-detail-desc="기존 의료 프로그램을 웹 환경으로 재구현하는 프로젝트로, 복잡한 의료 데이터를 직관적으로 확인할 수 있도록 대시보드 구조와 UI 흐름을 개선했습니다. 기획자 3명과의 데일리 협업을 통해 요구사항을 반영했으며, 기존 컴포넌트를 재정의하고 신규 컴포넌트를 설계하여 일관성과 확장성을 강화했습니다. 또한 의료 데이터의 가독성과 사용자 인지 효율을 개선하는 데 집중했습니다."
+                data-detail-role="Lead UI/UX Designer (Design 100%)"
+                data-detail-duration="2025.01 - 2025.05"
+                data-detail-tools="Figma"
+                data-detail-main-img="./images/project-seegene.png"
+                data-detail-media="./images/video-prototype.mp4">
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url(./images/project-seegene.png)'></div>
+                <div class="overlay absolute inset-0 bg-black/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-10">
+                    <p class="text-white/70 font-bold text-xs uppercase tracking-widest mb-2">Health Tech • Medical System</p>
+                    <h3 class="text-white text-3xl font-black mb-6">Seegene: <br>Medical UX/UI System Redesign</h3>
+                    <span class="material-symbols-outlined text-white text-4xl">arrow_outward</span>
+                </div>
+            </div>
+
+            <div class="project-item group relative overflow-hidden rounded-3xl bg-slate-100 dark:bg-white/5 aspect-[16/11] transition-all duration-500"
+                data-category="fintech"
+                data-detail-title="NICE Payments: Recurring Payment UX/UI Redesign"
+                data-detail-desc="사용자 결제 흐름을 분석하여 입력 단계를 단순화하고, 글로벌 결제 서비스 수준의 직관적인 UI/UX 구조로 개선했습니다. 또한 반응형 레이아웃 설계를 통해 다양한 디바이스 환경에서 일관된 결제 경험을 제공했습니다."
+                data-detail-role="UI/UX Designer & Publisher (Design, Responsive Publishing 100%)"
+                data-detail-duration="2024.03 - 2024.04"
+                data-detail-tools="Figma, VS code"
+                data-detail-main-img="./images/project-nicepay-detail01.png"
+                data-detail-media="./images/project-nicepay-detail02.png, ./images/project-nicepay-detail03.png">
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url(./images/project-nicepay.png)'></div>
+                <div class="overlay absolute inset-0 bg-black/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-10">
+                    <p class="text-white/70 font-bold text-xs uppercase tracking-widest mb-2">Fintech • Responsive Web</p>
+                    <h3 class="text-white text-3xl font-black mb-6">NICE Payments: <br>Recurring Payment UX/UI Redesign</h3>
+                    <span class="material-symbols-outlined text-white text-4xl">arrow_outward</span>
+                </div>
+            </div>
+
+            <div class="project-item group relative overflow-hidden rounded-3xl bg-slate-100 dark:bg-white/5 aspect-[16/11] transition-all duration-500" 
+                data-category="other"
+                data-detail-title="iBeems Platform: Monitoring & Control Dashboard"
+                data-detail-desc="설비 자동제어 시스템을 위한 관리자용 모니터링 및 제어 플랫폼으로, 각 장비와 설비 상태를 실시간으로 확인하고 효율적인 운영 관리를 지원하는 UI・UX를 디자인했습니다."
+                data-detail-role="Lead UI/UX & GUI Designer (Design 100%, Partial Publishing)"
+                data-detail-duration="2023.07 - 2023.10"
+                data-detail-tools="Figma, Adobe illustrator"
+                data-detail-main-img="./images/project-ibeems-detail01.png"
+                data-detail-media="./images/project-ibeems-detail02.png">
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url(./images/project-ibeems.png);'></div>
+                <div class="overlay absolute inset-0 bg-black/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-10">
+                    <p class="text-white/70 font-bold text-xs uppercase tracking-widest mb-2">Admin System • Web UI/UX</p>
+                    <h3 class="text-white text-3xl font-black mb-6">iBeems Platform: <br>Monitoring & Control Dashboard</h3>
+                    <span class="material-symbols-outlined text-white text-4xl">arrow_outward</span>
+                </div>
+            </div>
+
+            <div class="project-item group relative overflow-hidden rounded-3xl bg-slate-100 dark:bg-white/5 aspect-[16/11] transition-all duration-500" 
+                data-category="other"
+                data-detail-title="Visual & Communication Design"
+                data-detail-desc="브로셔, 이벤트 프로모션, 기업 PR 디자인을 통해 브랜드 메시지와 서비스 가치를 효과적으로 전달했습니다. 프로젝트 목적과 타겟 사용자에 맞춰 정보 구조를 설계하고, 매체 특성을 고려한 비주얼 커뮤니케이션 디자인을 수행했습니다."
+                data-detail-role="Visual Designer (Concept, Design 100%)"
+                data-detail-duration="Ongoing"
+                data-detail-tools="Figma, Adobe illustrator, Adobe photoshop"
+                data-detail-main-img="./images/project-event01.png"
+                data-detail-media="./images/project-event02.png, ./images/project-event03.png, ./images/project-event04.png, ./images/project-event05.png">
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url(./images/project-markting.png);'></div>
+                <div class="overlay absolute inset-0 bg-black/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-10">
+                    <p class="text-white/70 font-bold text-xs uppercase tracking-widest mb-2">Marketing Communication</p>
+                    <h3 class="text-white text-3xl font-black mb-6">Visual & Communication Design</h3>
+                    <span class="material-symbols-outlined text-white text-4xl">arrow_outward</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section class="max-w-7xl mx-auto px-6 py-24" id="about">
+        <div class="bg-slate-50 dark:bg-[#111] rounded-[3rem] p-8 md:p-20 border border-black/5 dark:border-white/5">
             
+            <div class="mb-20">
+                <div class="flex flex-col justify-between gap-8">
+                    <div>
+                        <p class="text-primary font-bold text-xs tracking-[0.3em] uppercase mb-6">About the Designer</p>
+                        <h2 class="text-4xl md:text-5xl font-black mb-8 leading-[1.1]">Structured. Intuitive. Human.</h2>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            오혜진 | OH HYEJIN<br>1996.02.10<br>서울특별시 서초구<br>contact.hyejin@gmail.com<br>+82 10-2885-0246
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="p-5 md:p-6 bg-white dark:bg-white/5 rounded-2xl border border-black/5 dark:border-white/5 flex flex-col items-center md:items-start text-center md:text-left">
+                            <img src="./images/icon-adobe-illustrator.svg" alt="illustrator icon" class="w-10 md:w-8 mb-2">
+                            <h4 class="font-black text-lg mt-2 mb-2 tracking-tight">Adobe Illustrator</h4>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed break-keep">
+                                아이콘, 벡터, 인포그래픽 등 다양한 비주얼 제작 경험이 있습니다.
+                            </p>
+                        </div>
+                        <div class="p-5 md:p-6 bg-white dark:bg-white/5 rounded-2xl border border-black/5 dark:border-white/5 flex flex-col items-center md:items-start text-center md:text-left">
+                            <img src="./images/icon-adobe-photoshop.svg" alt="photoshop icon" class="w-10 md:w-8 mb-2">
+                            <h4 class="font-black text-lg mt-2 mb-2 tracking-tight">Adobe Photoshop</h4>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed break-keep">
+                                이미지 보정, 합성 및 디테일한 그래픽 요소를 최적화합니다.
+                            </p>
+                        </div>
+                        <div class="p-5 md:p-6 bg-white dark:bg-white/5 rounded-2xl border border-black/5 dark:border-white/5 flex flex-col items-center md:items-start text-center md:text-left">
+                            <img src="./images/icon-figma.svg" alt="figma icon" class="w-10 md:w-8 mb-2">
+                            <h4 class="font-black text-lg mt-2 mb-2 tracking-tight">Figma</h4>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed break-keep">
+                                UX/UI 시안, 프로토타입 제작이 가능하며, 협업 툴로 효율적으로 활용할 수 있습니다.
+                            </p>
+                        </div>
+                        <div class="p-5 md:p-6 bg-white dark:bg-white/5 rounded-2xl border border-black/5 dark:border-white/5 flex flex-col items-center md:items-start text-center md:text-left">
+                            <img src="./images/icon-vscode.svg" alt="VS code icon" class="w-10 md:w-8 mb-2">
+                            <h4 class="font-black text-lg mt-2 mb-2 tracking-tight">VS Code</h4>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed break-keep">
+                                HTML/CSS 퍼블리싱 환경에서 사용하며, 시멘틱 마크업과 웹 접근성을 고려한 페이지 제작 경험이 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="section-wrap">
-                <!-- section01 -->
-                <section id="section01">
+            <div class="w-full">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
                     <div>
-                        <p class="section-title">다양한 맞춤<br>UX・UI</p>
-                        <p class="section-subtext">사용자 니즈에 맞춘 <br class="mo">직관적 인터페이스를 구축합니다.</p>
+                        <p class="text-primary font-bold text-xs tracking-[0.2em] uppercase mb-2">Experience</p>
+                        <h3 class="text-3xl font-black">Career Summary</h3>
                     </div>
-                    <!-- 탭 메뉴 -->
-                    <ul class="tab_menu">
-                        <li class="active" data-tab="web"><i class="fa-solid fa-desktop"></i><p>Web</p></li>
-                        <li data-tab="app"><i class="fa-solid fa-mobile"></i><p>App</p></li>
-                        <span class="tab_slider"></span>
-                    </ul>
-    
-                    <!-- Web 탭 -->
-                    <div class="tab active" id="web">
-                        <div class="slider" id="slider-web">
-                            <div class="slides">
-                                <div class="slide"><img src="./images/국가과제-1.png" alt="web1"></div>
-                                <div class="slide"><img src="./images/국가과제-2.png" alt="web2"></div>
-                                <div class="slide"><img src="./images/국가과제-3.png" alt="web3"></div>
-                                <div class="slide"><img src="./images/국가과제-4.png" alt="web4"></div>
-                            </div>
-                            <div class="dots"></div>
-                        </div>
-    
-                        <div class="project-desc">
-                            <p><b>[ iBEEMS 자동제어 시스템(2024) ]</b></p>
-                            <span>
-                                <i class="fa-regular fa-user"></i> 역할: 전 화면 UI・UX 디자인<br>
-                                <i class="fa-regular fa-circle-check"></i> 주요성과: 데이터 가독성 향상 및 정보 계층 구조 설계, 설비·기계·건물·도면 등 시각화 일러스트 제작<br>
-                                <span class="text-dim">(실제 내용은 비공개이므로 예시 화면으로 재구성하였습니다.)</span>
-                            </span>
-                        </div>
-                    </div>
-    
-                    <!-- App 탭 -->
-                    <div class="tab" id="app">
-                        <div class="slider" id="slider-app">
-                            <div class="slides">
-                                <div class="slide"><img src="./images/banking-1.png" alt="app1"></div>
-                                <div class="slide"><img src="./images/banking-2.png" alt="app2"></div>
-                                <div class="slide"><img src="./images/banking-3.png" alt="app3"></div>
-                                <div class="slide"><img src="./images/banking-4.png" alt="app4"></div>
-                            </div>
-                            <div class="dots"></div>
-                        </div>
-    
-                        <div class="project-desc">
-                            <p><b>[ 뱅킹 서비스 앱 ]</b></p>
-                            <span>
-                                <i class="fa-regular fa-user"></i> 역할: 전체 화면 디자인 및 사용자 경험 설계<br>
-                                <i class="fa-regular fa-circle-check"></i> 주요 성과: 계좌 및 거래 정보 가독성 향상, 직관적 사용자 흐름 설계, 시각적 아이콘·컴포넌트 디자인<br>
-                                <span class="text-dim">(포트폴리오용 컨셉 프로젝트입니다.)</span>
-                            </span>
-                        </div>
-                    </div>
-                </section>
-    
-                <!-- section02 -->
-                <section class="section02">
-                    <div>
-                      <p class="section-title">유연한 반응형<br>디바이스</p>
-                      <p class="section-subtext">모든 화면에서 최적화된 경험 제공합니다.</p>
-                    </div>
-                  
-                    <div class="section02-area">
-                      <div class="responsive-demo">
-    
-                        <div class="frame-wrapper">
-                          <div class="frame-skeleton" aria-hidden="true">
-                              <div class="line-layout">
-                                  <div class="line01">
-                                      <div class="box"></div>
-                                      <div class="box"></div>
-                                  </div>
-                                  <p>Devices Auto Layout</p>
-                                  <div class="box resize" style="width: 180px;"></div>
-                                  <div class="box resize" style="width: 280px;"></div>
-                                  <div class="line02">
-                                      <div class="box"></div>
-                                      <div class="box"></div>
-                                      <div class="box"></div>
-                                      <div class="box"></div>
-                                      <div class="box"></div>
-                                      <div class="box"></div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="handlebar"><div class="micro"></div></div>
-                          <div class="info-toast">화면을 제어해보세요.<p class="mobile">(PC버전에서 확인해주세요.)</p></div>
-                        </div>
-                        
-                      </div>
-                    </div>
-                </section>
-    
-                <!-- section03 -->
-                <section class="section03">
-                    <div>
-                        <p class="section-title">유지보수<br>어드민 페이지</p>
-                        <p class="section-subtext">관리자가 쉽게 사용할 수 있도록 가독성과 디자인을 고려하여 설계합니다.</p>
-                    </div>
-                    <div class="section03-area">
-                        <img src="./images/admin-img.png" alt="admin img" style="width: 100%; opacity: 0.8;">
-                        <div class="device">
-                            <div class="image"></div>
-                        </div>
+                    <span class="text-slate-400 text-sm font-medium">Showing 22 Projects</span>
+                </div>
 
-                        <div class="form-container mobile-none">
-                            <div class="modal-header"><p>사용자 등록</p><i class="fa-solid fa-xmark"></i></div>
-                            <form action="/submit" method="POST">
-                                <div class="form-area">
-                                    <!-- 사용자 ID -->
-                                    <div class="form-group">
-                                        <label for="userId">사용자 ID</label>
-                                        <input type="text" id="userId" name="userId" value="ohhyejin" required>
-                                    </div>
-                                    <!-- 소속명 -->
-                                    <div class="form-group">
-                                        <label for="affiliation">소속명</label>
-                                        <input type="text" id="affiliation" name="affiliation" placeholder="회사나 기관명 입력" required>
-                                    </div>
-                                    <!-- Name -->
-                                    <div class="form-group">
-                                        <label for="name">Name</label>
-                                        <input type="text" id="name" name="name" value="오혜진" placeholder="홍길동" required>
-                                    </div>
-                                    <!-- 상태 -->
-                                    <div class="form-group">
-                                        <label for="status">상태</label>
-                                        <select id="status" name="status" required>
-                                            <option value="">선택하세요</option>
-                                            <option value="active">활성</option>
-                                            <option value="inactive">비활성</option>
-                                        </select>
-                                    </div>
-                                    <!-- 유형 -->
-                                    <div class="form-group">
-                                        <label for="type">유형</label>
-                                        <select id="type" name="type" required>
-                                            <option value="">선택하세요</option>
-                                            <option value="all">All</option>
-                                            <option value="admin">UX・UI design</option>
-                                            <option value="user">Publishing</option>
-                                        </select>
-                                    </div>
-                                    <!-- 이메일 -->
-                                    <div class="form-group">
-                                        <label for="email">이메일</label>
-                                        <input type="email" id="email" name="email" value="contact.hyejin@gmail.com" placeholder="example@example.com" required>
-                                    </div>
-                                </div>
-                            
-                                <!-- 버튼 영역 -->
-                                <div class="form-buttons">
-                                    <button type="button" onclick="history.back()">취소</button>
-                                    <button type="submit" id="submitBtn">등록</button>
-                                    <img src="./images/cursor.svg" alt="cursor image">
-                                </div>
-                            </form>
-                            <div id="toast" class="toast">등록되었습니다.(샘플)</div>
-                        </div>
-                        
-                    </div>
-                </section>
-    
-                <!-- section04 -->
-                <section id="section04" class="section04">
-                    <div>
-                      <p class="section-title">UX Process <br class="mo">& Visual Design</p>
-                    </div>
+                <div class="overflow-x-auto border-t-2 border-black dark:border-white">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-black/10 dark:border-white/10">
+                                <th class="py-5 px-4 text-[11px] font-bold text-slate-400 uppercase tracking-wider w-1/2">사업명 (Project Name)</th>
+                                <th class="py-5 px-4 text-[11px] font-bold text-slate-400 uppercase tracking-wider">참여기간</th>
+                                <th class="py-5 px-4 text-[11px] font-bold text-slate-400 uppercase tracking-wider">담당업무</th>
+                                <th class="py-5 px-4 text-[11px] font-bold text-slate-400 uppercase tracking-wider">발주처</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-black/5 dark:divide-white/5">
+                            <tr class="hover:bg-slate-100 dark:hover:bg-white/5 transition-colors group">
+                                <td class="py-4 px-4 font-bold text-sm group-hover:text-primary">소보법 메일템플릿 리뉴얼</td>
+                                <td class="py-4 px-4 text-xs text-slate-500 tabular-nums">2025.06 - 2025.09</td>
+                                <td class="py-4 px-4 text-xs font-medium">Pub / Design</td>
+                                <td class="py-4 px-4 text-xs text-slate-500">NICE페이먼츠</td>
+                            </tr>
+                            <tr class="hover:bg-slate-100 dark:hover:bg-white/5 transition-colors group">
+                                <td class="py-4 px-4 font-bold text-sm group-hover:text-primary">문서통합관리 인터페이스 관리시스템</td>
+                                <td class="py-4 px-4 text-xs text-slate-500 tabular-nums">2025.07 - 2025.08</td>
+                                <td class="py-4 px-4 text-xs font-medium">Design</td>
+                                <td class="py-4 px-4 text-xs text-slate-500">BC카드</td>
+                            </tr>
+                            <tr class="hover:bg-slate-100 dark:hover:bg-white/5 transition-colors group">
+                                <td class="py-4 px-4 font-bold text-sm group-hover:text-primary">PAYU 간편결제 고도화</td>
+                                <td class="py-4 px-4 text-xs text-slate-500 tabular-nums">2025.06 - 2025.07</td>
+                                <td class="py-4 px-4 text-xs font-medium">Pub / Design</td>
+                                <td class="py-4 px-4 text-xs text-slate-500">NICE페이먼츠</td>
+                            </tr>
+                            <tr class="hover:bg-slate-100 dark:hover:bg-white/5 transition-colors group">
+                                <td class="py-4 px-4 font-bold text-sm group-hover:text-primary text-slate-400 font-medium">Beyond 19+ more projects...</td>
+                                <td colspan="3" class="py-4 px-4 text-right">
+                                    <button type="button" onclick="openArchive()" class="text-[10px] font-black uppercase tracking-widest bg-black dark:bg-white text-white dark:text-black px-3 py-1 rounded-full">View All</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 
-                    <ul class="other-design">
-                        <li>
-                             <button type="button" class="link" onclick="openModal('modal-prototype')">
-                                <img src="./images/btn-icon-propotype.svg" alt="icon">
-                                <p>Prototype</p>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="link" onclick="openModal('modal-brochure')">
-                                <img src="./images/btn-icon-brochure.svg" alt="icon">
-                                <p>Brochure</p>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="link" onclick="openModal('modal-promotion')">
-                                <img src="./images/btn-icon-event.svg" alt="icon">
-                                <p>Promotion・PR</p>
-                            </button>
-                        </li>
-                    </ul>
-                </section>
+        <!-- view all -->
+        <div id="archive-layer" class="fixed inset-0 bg-black z-[100] overflow-y-auto hidden">
+            <div class="max-w-7xl mx-auto px-6 py-16">
+                
+                <div class="flex justify-end mb-8">
+                    <button onclick="closeArchive()" class="fixed top-10 right-10 z-[110] size-14 bg-white dark:bg-white/10 rounded-full flex items-center justify-center hover:scale-110 transition-transform border border-black/5">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
 
-                <!-- section05 -->
-                <section>
-                    <p class="section-title">Career Summary</p>
-                    <div class="table-container">
-                        <table class="project-table">
-                            <thead>
-                            <tr>
-                                <th style="width: 330px;">사업명</th>
-                                <th style="width: 160px;">참여기간</th>
-                                <th>담당업무</th>
-                                <th>발주처</th>
+                <h2 class="text-5xl font-black text-white mb-12">Career Archive</h2>
+
+                <div class="border-t border-white/10">
+                    <table class="w-full text-left border-collapse min-w-[900px]">
+                        <thead>
+                            <tr class="border-b border-white/5">
+                                <th class="py-6 px-4 text-[11px] font-bold text-slate-500 uppercase tracking-widest">사업명</th>
+                                <th class="py-6 px-4 text-[11px] font-bold text-slate-500 uppercase tracking-widest">참여기간</th>
+                                <th class="py-6 px-4 text-[11px] font-bold text-slate-500 uppercase tracking-widest">담당업무</th>
+                                <th class="py-6 px-4 text-[11px] font-bold text-slate-500 uppercase tracking-widest">발주처</th>
                             </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>문서통합관리 인터페이스 관리시스템</td>
-                                <td>2025.07 - 2025.08</td>
-                                <td>디자인</td>
-                                <td>BC카드</td>
+                        </thead>
+                        <tbody class="divide-y divide-white/5 text-white">
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">소보법 메일템플릿 리뉴얼</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2025.06 - 2025.09</td>
+                                <td class="py-6 px-4 text-sm font-medium">Publishing / Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">NICE페이먼츠</td>
                             </tr>
-                            <tr>
-                                <td>소보법 메일템플릿 리뉴얼</td>
-                                <td>2025.06 - 2025.07</td>
-                                <td>Publishing / 디자인</td>
-                                <td>NICE페이먼츠</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">문서통합관리 인터페이스 관리시스템</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2025.07 - 2025.08</td>
+                                <td class="py-6 px-4 text-sm font-medium">Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">BC카드</td>
                             </tr>
-                            <tr>
-                                <td>PAYU 간편결제 고도화</td>
-                                <td>2025.06 - 2025.07</td>
-                                <td>Publishing / 디자인</td>
-                                <td>NICE페이먼츠</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">PAYU 간편결제 고도화</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2025.06 - 2025.07</td>
+                                <td class="py-6 px-4 text-sm font-medium">Publishing / Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">NICE페이먼츠</td>
                             </tr>
-                            <tr>
-                                <td>SCT/Tools 개발</td>
-                                <td>2025.01 - 2025.05</td>
-                                <td>Publishing / 디자인</td>
-                                <td>Seegene</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">SCT/Tools 개발</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2025.01 - 2025.05</td>
+                                <td class="py-6 px-4 text-sm font-medium">Publishing / Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">Seegene</td>
                             </tr>
-                            <tr>
-                                <td>Smart ILS</td>
-                                <td>2025.02 - 2025.04</td>
-                                <td>디자인</td>
-                                <td>POSCO</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">Smart ILS</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2025.02 - 2025.04</td>
+                                <td class="py-6 px-4 text-sm font-medium">Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">POSCO</td>
                             </tr>
-                            <tr>
-                                <td>통합결제창 전자계약 고도화</td>
-                                <td>2024.12 - 2025.03</td>
-                                <td>디자인</td>
-                                <td>NICE페이먼츠</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">통합결제창 전자계약 고도화</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2024.12 - 2025.03</td>
+                                <td class="py-6 px-4 text-sm font-medium">Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">NICE페이먼츠</td>
                             </tr>
-                            <tr>
-                                <td>Scaner Program</td>
-                                <td>2024.12 - 2025.01</td>
-                                <td>디자인</td>
-                                <td>서울지방고용노동청</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">Scaner Program</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2024.12 - 2025.01</td>
+                                <td class="py-6 px-4 text-sm font-medium">Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">서울지방고용노동청</td>
                             </tr>
-                            <tr>
-                                <td>ECM 솔루션 관리자시스템</td>
-                                <td>2024.09 - 2024.11</td>
-                                <td>디자인</td>
-                                <td>코이웨어</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">ECM 솔루션 관리자시스템</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2024.09 - 2024.11</td>
+                                <td class="py-6 px-4 text-sm font-medium">Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">코이웨어</td>
                             </tr>
-                            <tr>
-                                <td>NICEPAY 비대면플랫폼 웹사이트 리뉴얼</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">NICEPAY 비대면플랫폼 웹사이트 리뉴얼</td>
                                 <!-- <td><a href="https://start.nicepay.co.kr/">NICEPAY 비대면플랫폼 웹사이트 리뉴얼</a></td> -->
-                                <td>2024.08 - 2024.11</td>
-                                <td>디자인</td>
-                                <td>NICE페이먼츠</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2024.08 - 2024.11</td>
+                                <td class="py-6 px-4 text-sm font-medium">Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">NICE페이먼츠</td>
                             </tr>
-                            <tr>
-                                <td>NextQVAN 가맹점 모바일 신청 서비스 관리시스템</td>
-                                <td>2024.06 - 2024.08</td>
-                                <td>디자인</td>
-                                <td>모바일리더 (Mobile Leader)</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">NextQVAN 가맹점 모바일 신청 서비스 관리시스템</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2024.06 - 2024.08</td>
+                                <td class="py-6 px-4 text-sm font-medium">Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">모바일리더(Mobile Leader)</td>
                             </tr>
-                            <tr>
-                                <td>LG PSMS</td>
-                                <td>2024.04 - 2024.10</td>
-                                <td>Publishing / 디자인</td>
-                                <td>LG전자</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">LG PSMS</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2024.04 - 2024.10</td>
+                                <td class="py-6 px-4 text-sm font-medium">Publishing / Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">LG전자</td>
                             </tr>
-                            <tr>
-                                <td>휴면 회원 예금관리시스템</td>
-                                <td>2023.12 - 2024.02</td>
-                                <td>Publishing / 디자인</td>
-                                <td>서민금융진흥원</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">빌링결제창 UI/UX 리뉴얼</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2024.03 - 2024.04</td>
+                                <td class="py-6 px-4 text-sm font-medium">Publishing / Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">NICE페이먼츠</td>
                             </tr>
-                            <tr>
-                                <td>NVAN 가맹점 신청 간소화</td>
-                                <td>2023.11 - 2024.02</td>
-                                <td>Publishing / 디자인</td>
-                                <td>NICE정보통신</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">휴면 회원 예금관리시스템</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2023.12 - 2024.02</td>
+                                <td class="py-6 px-4 text-sm font-medium">Publishing / Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">서민금융진흥원</td>
                             </tr>
-                            <tr>
-                                <td>자율운전 기반 지능형 건물 에너지, 환경통합관리시스템 (iBEEMS)</td>
-                                <td>2023.07 - 2023.10</td>
-                                <td>디자인</td>
-                                <td>정부과제</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">NVAN 가맹점 신청 간소화</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2023.11 - 2024.02</td>
+                                <td class="py-6 px-4 text-sm font-medium">Publishing / Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">NICE정보통신</td>
                             </tr>
-                            <tr>
-                                <td>Koiware AI homepage</td>
-                                <td>2022.10 - 2023.02</td>
-                                <td>Publishing / 디자인</td>
-                                <td>코이웨어</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">자율운전 기반 지능형 건물 에너지, 환경통합관리시스템 (iBEEMS)</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2023.07 - 2023.10</td>
+                                <td class="py-6 px-4 text-sm font-medium">Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">정부과제</td>
                             </tr>
-                            <tr>
-                                <td>나이스체크 매출정산 App</td>
-                                <td>2023.02 - 2023.08</td>
-                                <td>Publishing / 디자인</td>
-                                <td>NICE정보통신</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">Koiware AI homepage</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2022.10 - 2023.02</td>
+                                <td class="py-6 px-4 text-sm font-medium">Publishing / Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">코이웨어</td>
                             </tr>
-                            <tr>
-                                <td>OCR</td>
-                                <td>2023.01 - 2023.04</td>
-                                <td>디자인</td>
-                                <td>코이웨어</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">매출정산 나이스체크 App</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2023.02 - 2023.08</td>
+                                <td class="py-6 px-4 text-sm font-medium">Publishing / Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">NICE정보통신</td>
                             </tr>
-                            <tr>
-                                <td>RMT 채팅번역 App</td>
-                                <td>2023.01 - 2023.02</td>
-                                <td>디자인</td>
-                                <td>코이웨어</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">RMT 채팅번역 App</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2023.01 - 2023.02</td>
+                                <td class="py-6 px-4 text-sm font-medium">Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">코이웨어</td>
                             </tr>
-                            <tr>
-                                <td>APPOS</td>
-                                <td>2022.10 - 2022.12</td>
-                                <td>디자인</td>
-                                <td>NICE페이먼츠</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">APPOS</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2022.10 - 2022.12</td>
+                                <td class="py-6 px-4 text-sm font-medium">Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">NICE페이먼츠</td>
                             </tr>
-                            <tr>
-                                <td>AutoGen 학습데이터생성</td>
-                                <td>2022.04 - 2022.06</td>
-                                <td>Publishing / 디자인</td>
-                                <td>코이웨어</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">AutoGen 학습데이터생성</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2022.04 - 2022.06</td>
+                                <td class="py-6 px-4 text-sm font-medium">Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">코이웨어</td>
                             </tr>
-                            <tr>
-                                <td>LG FUT</td>
-                                <td>2022.01 - 2022.03</td>
-                                <td>Publishing / 디자인</td>
-                                <td>LG전자</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">LG FUT</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2022.01 - 2022.03</td>
+                                <td class="py-6 px-4 text-sm font-medium">Publishing/Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">LG전자</td>
                             </tr>
-                            <tr>
-                                <td>LG B2B 버티컬 솔루션</td>
-                                <td>2021.04 - 2021.05</td>
-                                <td>디자인</td>
-                                <td>LG전자</td>
+                            <tr class="hover:bg-white/5 transition-all group">
+                                <td class="py-6 px-4 font-bold text-lg group-hover:text-blue-400">LG B2B 버티컬 솔루션</td>
+                                <td class="py-6 px-4 text-sm text-slate-400 tabular-nums">2021.04 - 2021.05</td>
+                                <td class="py-6 px-4 text-sm font-medium">Design</td>
+                                <td class="py-6 px-4 text-sm text-slate-400">LG전자</td>
                             </tr>
-                            </tbody>
-                        </table>
-                </section>
+                        </tbody>
+                    </table>
 
-                <!-- section06 -->
-                <section id="section06" class="section06">
-                    <p>Let’s create something meaningful together,<br>
-                       Thanks for reading.</p>
-                    <a href="mailto:contact.hyejin@gmail.com" class="link" id="emailLink">
-                        <i class="fa-regular fa-envelope"></i>contact.hyejin@gmail.com
-                        <div id="tooltip">Copied to clipboard!</div>
-                    </a>
-                </section>
-            </div>
-        </div>
-        
-
-        <footer>
-            <p>© 2025 OHHYEJIN</p>
-        </footer>
-    </div>
-
-
-
-    <!-- Modal : Prototype -->
-    <div class="modal" id="modal-prototype" role="dialog" aria-modal="true" aria-labelledby="modal" hidden>
-        <div class="modal-overlay" onclick="closeModal('modal-prototype')"></div>
-
-        <div class="modal-container" role="document">
-            <div class="modal-header">
-                <h4 class="modal-title" id="modal-title">Prototype</h4>
-                <button type="button" class="modal-close" aria-label="Close modal" onclick="closeModal('modal-prototype')">
-                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-                </button>
-            </div>
-
-            <!-- contents -->
-             <div class="modal-video">
-                 <video class="prototype-video" autoplay loop muted playsinline preload="metadata" poster="prototype-poster.jpg">
-                     <source src="./images/video-prototype.mp4" type="video/mp4" />
-                     브라우저가 비디오를 지원하지 않습니다.
-                </video>
-                <p>- 본 프로젝트는 재직 당시 참여한 작업으로, 대외 공개된 정보 및 개인 작업물만을 기반으로 재구성되었습니다.</p>
-             </div>
-        </div>
-    </div>
-
-    <!-- Modal : Brochure -->
-    <div class="modal" id="modal-brochure" role="dialog" aria-modal="true" aria-labelledby="modal" hidden>
-        <div class="modal-overlay" onclick="closeModal('modal-brochure')"></div>
-
-        <div class="modal-container" role="document">
-            <div class="modal-header">
-                <h4 class="modal-title" id="modal-title">Brochure</h4>
-                <button type="button" class="modal-close" aria-label="Close modal" onclick="closeModal('modal-brochure')">
-                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-                </button>
-            </div>
-
-            <!-- Tab Component -->
-            <div class="modal-tab" data-tab>
-                <!-- Tab List -->
-                <div class="modal-tab-list" role="tablist" aria-label="Brochure tabs">
-                    <button class="modal-tab-button is-active" role="tab" aria-selected="true" aria-controls="brochure-panel-1" id="brochure-tab-1" data-tab-button>
-                    01
-                    </button>
-                    <button
-                    class="modal-tab-button" role="tab" aria-selected="false" aria-controls="brochure-panel-2" id="brochure-tab-2" data-tab-button>
-                    02
-                    </button>
-                    <button
-                    class="modal-tab-button" role="tab" aria-selected="false" aria-controls="brochure-panel-3" id="brochure-tab-3" data-tab-button>
-                    03
-                    </button>
-                    <button
-                    class="modal-tab-button" role="tab" aria-selected="false" aria-controls="brochure-panel-4" id="brochure-tab-4" data-tab-button>
-                    04
-                    </button>
-                </div>
-
-                <!-- Tab Panels -->
-                <div class="modal-tab-panels">
-                    <div class="modal-tab-panel is-active" role="tabpanel" id="brochure-panel-1" aria-labelledby="brochure-tab-1" tabindex="0">
-                        <img src="./images/img-brochure-1.jpg" alt="브로슈어 1번 이미지">
-                    </div>
-                    <div class="modal-tab-panel" role="tabpanel" id="brochure-panel-2" aria-labelledby="brochure-tab-2" tabindex="0" hidden>
-                        <img src="./images/img-brochure-2.jpg" alt="브로슈어 2번 이미지">
-                    </div>
-                    <div class="modal-tab-panel" role="tabpanel" id="brochure-panel-3" aria-labelledby="brochure-tab-3" tabindex="0" hidden>
-                        <img src="./images/img-brochure-3.jpg" alt="브로슈어 3번 이미지">
-                    </div>
-                    <div class="modal-tab-panel" role="tabpanel" id="brochure-panel-4" aria-labelledby="brochure-tab-4" tabindex="0" hidden>
-                        <img src="./images/img-brochure-4.jpg" alt="브로슈어 4번 이미지">
-                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Modal : Promotion,PR -->
-    <div class="modal" id="modal-promotion" role="dialog" aria-modal="true" aria-labelledby="modal" hidden>
-        <div class="modal-overlay" onclick="closeModal('modal-promotion')"></div>
-
-        <div class="modal-container" role="document">
-            <div class="modal-header">
-                <h4 class="modal-title" id="modal-title">Promotion・PR</h4>
-                <button type="button" class="modal-close" aria-label="Close modal" onclick="closeModal('modal-promotion')">
-                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-                </button>
-            </div>
-
-            <!-- Tab Component -->
-            <div class="modal-tab" data-tab>
-                <!-- Tab List -->
-                <div class="modal-tab-list" role="tablist" aria-label="Promotion tabs">
-                    <button class="modal-tab-button is-active" role="tab" aria-selected="true" aria-controls="promotion-panel-1" id="promotion-tab-1" data-tab-button>
-                    01
-                    </button>
-                    <button
-                    class="modal-tab-button" role="tab" aria-selected="false" aria-controls="promotion-panel-2" id="promotion-tab-2" data-tab-button>
-                    02
-                    </button>
-                    <button
-                    class="modal-tab-button" role="tab" aria-selected="false" aria-controls="promotion-panel-3" id="promotion-tab-3" data-tab-button>
-                    03
-                    </button>
-                    <button
-                    class="modal-tab-button" role="tab" aria-selected="false" aria-controls="promotion-panel-4" id="promotion-tab-4" data-tab-button>
-                    04
-                    </button>
-                    <button
-                    class="modal-tab-button" role="tab" aria-selected="false" aria-controls="promotion-panel-5" id="promotion-tab-5" data-tab-button>
-                    05
-                    </button>
-                </div>
-
-                <!-- Tab Panels -->
-                <div class="modal-tab-panels">
-                    <div class="modal-tab-panel is-active" role="tabpanel" id="promotion-panel-1" aria-labelledby="promotion-tab-1" tabindex="0">
-                        <img src="./images/img-promotion-1.jpg" alt="프로모션 1번 이미지">
+    <section class="max-w-7xl mx-auto px-6 py-20" id="contact">
+        <div class="text-center py-20 bg-primary rounded-[3rem] text-white px-6">
+            <h2 class="text-4xl md:text-6xl font-black mb-10">Crafting empathy-driven digital experiences.</h2>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="mailto:contact.hyejin@gmail.com" id="emailLink" class="relative bg-white text-primary px-10 py-5 rounded-full text-sm font-bold tracking-widest hover:scale-105 transition-all flex items-center justify-center gap-2 shadow-xl">
+                    <span class="material-symbols-outlined text-lg">mail</span>
+                    Contact Me
+                    <div id="tooltip" class="absolute -top-12 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] px-3 py-2 rounded-lg opacity-0 transition-opacity pointer-events-none whitespace-nowrap">
+                        Email Copied!
                     </div>
-                    <div class="modal-tab-panel" role="tabpanel" id="promotion-panel-2" aria-labelledby="promotion-tab-2" tabindex="0" hidden>
-                        <img src="./images/img-promotion-2.jpg" alt="프로모션 2번 이미지">
-                    </div>
-                    <div class="modal-tab-panel" role="tabpanel" id="promotion-panel-3" aria-labelledby="promotion-tab-3" tabindex="0" hidden>
-                        <img src="./images/img-promotion-3.jpg" alt="프로모션 3번 이미지">
-                    </div>
-                    <div class="modal-tab-panel" role="tabpanel" id="promotion-panel-4" aria-labelledby="promotion-tab-4" tabindex="0" hidden>
-                        <img src="./images/img-promotion-4.jpg" alt="프로모션 4번 이미지">
-                    </div>
-                    <div class="modal-tab-panel" role="tabpanel" id="promotion-panel-5" aria-labelledby="promotion-tab-5" tabindex="0" hidden>
-                        <img src="./images/img-promotion-5.jpg" alt="프로모션 5번 이미지">
-                    </div>
-                </div>
+                </a>
+                <a href="./images/PDF_portfolio.pdf" target="_blank" class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-full text-sm font-bold tracking-widest hover:bg-white/20 transition-all flex items-center justify-center">
+                    View Resume
+                </a>
             </div>
         </div>
+    </section>
+</main>
+
+<footer class="bg-background-light dark:bg-background-dark pt-16 pb-10 px-6 border-t border-black/5 dark:border-white/5">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
+            <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
+                <div class="flex items-center gap-2">
+                    <img src="./images/favicon.png" class="dark:invert w-5 h-5" alt="favicon">
+                    <h2 class="text-xl font-black tracking-tight uppercase">Hyejin</h2>
+                </div>
+                <p class="text-slate-500 text-sm font-medium leading-relaxed max-w-md">
+                    Specializing in UI/UX design, design systems, and digital brand strategy for forward-thinking companies.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pt-10 border-t border-black/5 dark:border-white/5">
+            <p class="text-[10px] text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] font-bold">
+                © 2026 HYEJIN DESIGN. ALL RIGHTS RESERVED.
+            </p>
+            
+            <p class="text-[9px] md:text-[10px] text-slate-400 dark:text-slate-500 font-medium opacity-80 leading-loose">
+                <span class="material-symbols-outlined text-[12px] align-middle mr-1">auto_awesome</span> 
+                본 포트폴리오는 AI 기술의 효율성과 디자이너의 전략적 사고를 결합해 결과물의 완성도를 높였습니다.
+            </p>
+        </div>
     </div>
+</footer>
 
 
+<!-- solutions details -->
+ <div id="project-detail-layer" class="fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-xl opacity-0 transition-opacity duration-500" id="detail-bg"></div>
+    
+    <div class="relative h-full overflow-y-auto overflow-x-hidden translate-y-20 opacity-0 transition-all duration-700 ease-out" id="detail-content">
+        <div class="max-w-5xl mx-auto px-6 py-32">
+            <button id="close-detail" class="fixed top-10 right-10 z-[110] size-14 bg-white dark:bg-white/10 rounded-full flex items-center justify-center hover:scale-110 transition-transform border border-black/5">
+                <span class="material-symbols-outlined">close</span>
+            </button>
 
+            <div id="detail-injected-content">
+                </div>
+        </div>
+    </div>
+</div>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. 프로젝트 상세 레이어 관련 변수들
+    const items = document.querySelectorAll('.project-item');
+    const detailLayer = document.getElementById('project-detail-layer');
+    const detailBg = document.getElementById('detail-bg');
+    const detailContent = document.getElementById('detail-content');
+    const detailInjected = document.getElementById('detail-injected-content');
+    const closeBtn = document.getElementById('close-detail');
 
-    <!-- script -->
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
+    // 2. 프로젝트 클릭 시 상세 보기 로직
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            const d = item.dataset;
+            
+            // [포인트 1] 배경 이미지 가져오기 (가장 안전한 방식)
+            // HTML에 data-detail-main-img가 있으면 쓰고, 없으면 카드의 배경 이미지를 가져옵니다.
+            let bgImg = d.detailMainImg || item.querySelector('.absolute.inset-0').style.backgroundImage;
+            
+            // url() 형태가 아니라면 url()을 씌워줍니다.
+            if (bgImg && !bgImg.includes('url(')) {
+                bgImg = `url(${bgImg})`;
+            }
 
-        /* ---------------- Tab switching ---------------- */
-        const tabs = document.querySelectorAll(".tab_menu li");
-        const tabContents = document.querySelectorAll(".tab");
-        const slider = document.querySelector(".tab_slider");
+            // [포인트 2] 미디어 리스트 생성 (이미지/비디오 구분)
+            const mediaListHtml = d.detailMedia 
+                ? d.detailMedia.split(',').map(src => {
+                    const file = src.trim();
+                    const isVideo = file.toLowerCase().endsWith('.mp4') || file.toLowerCase().endsWith('.webm');
+                    
+                    if (isVideo) {
+                        return `
+                            <div class="w-full mb-10 overflow-hidden rounded-[2rem] shadow-lg bg-black">
+                                <video src="${file}" autoplay loop muted playsinline class="w-full h-auto block"></video>
+                            </div>`;
+                    } else {
+                        return `
+                            <div class="w-full mb-10 overflow-hidden rounded-[2rem] shadow-lg">
+                                <img src="${file}" alt="Detail" class="w-full h-auto block">
+                            </div>`;
+                    }
+                }).join('')
+                : '';
 
-        const moveSlider = (activeTab) => {
-            if (!activeTab || !slider) return;
-            const style = window.getComputedStyle(activeTab);
-            const marginLeft = parseFloat(style.marginLeft);
-            const marginRight = parseFloat(style.marginRight);
-            const left = activeTab.offsetLeft - marginLeft;
-            const width = activeTab.offsetWidth + marginLeft + marginRight;
-            slider.style.left = left + "px";
-            slider.style.width = width + "px";
-        };
+            // [포인트 3] HTML 주입
+            detailInjected.innerHTML = `
+                <p class="text-primary font-bold text-sm uppercase tracking-widest mb-6">
+                    ${item.querySelector('p').innerText}
+                </p>
+                <h2 class="text-5xl md:text-7xl font-black mb-12 tracking-tighter leading-tight">
+                    ${d.detailTitle || 'Project Title'}
+                </h2>
+                
+                <div class="aspect-video rounded-[2rem] bg-cover bg-center mb-16 shadow-2xl" 
+                     style="background-image: ${bgImg}">
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
+                    <div class="md:col-span-2">
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Project Overview</h4>
+                        <p class="leading-relaxed text-lg text-slate-600 dark:text-slate-400 whitespace-pre-line">
+                            ${d.detailDesc || '내용을 준비 중입니다.'}
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-6 text-sm border-l border-black/5 dark:border-white/10 pl-8">
+                        <div><p class="font-black text-slate-900 dark:text-white uppercase mb-1">Role</p><p class="text-slate-500">${d.detailRole || '-'}</p></div>
+                        <div><p class="font-black text-slate-900 dark:text-white uppercase mb-1">Duration</p><p class="text-slate-500">${d.detailDuration || '-'}</p></div>
+                        <div><p class="font-black text-slate-900 dark:text-white uppercase mb-1">Tools</p><p class="text-slate-500">${d.detailTools || '-'}</p></div>
+                    </div>
+                </div>
 
-        // 초기 위치
-        requestAnimationFrame(() => moveSlider(document.querySelector(".tab_menu li.active")));
-
-        tabs.forEach(tab => {
-            tab.addEventListener("click", () => {
-                const target = tab.dataset.tab;
-                if (!target) return;
-                tabs.forEach(t => t.classList.remove("active"));
-                tabContents.forEach(c => c.classList.remove("active"));
-                tab.classList.add("active");
-                document.getElementById(target)?.classList.add("active");
-                moveSlider(tab);
-            });
+                <div class="project-detail-media-list mt-20">
+                    ${mediaListHtml}
+                </div>
+            `;
+            // 애니메이션 실행
+            document.body.style.overflow = 'hidden';
+            detailLayer.classList.remove('hidden');
+            setTimeout(() => {
+                detailBg.classList.replace('opacity-0', 'opacity-100');
+                detailContent.classList.remove('translate-y-20', 'opacity-0');
+            }, 50);
         });
-
-        // 반응형 대응
-        window.addEventListener('resize', () => moveSlider(document.querySelector(".tab_menu li.active")));
-
-
-        /* ---------------- Slider logic ---------------- */
-        const initSlider = (id) => {
-            const sliderEl = document.getElementById(id);
-            if (!sliderEl) return;
-            const slides = sliderEl.querySelector(".slides");
-            const slideList = sliderEl.querySelectorAll(".slide");
-            const dotsContainer = sliderEl.querySelector(".dots");
-            if (!slides || !dotsContainer || slideList.length === 0) return;
-
-            let index = 0;
-
-            slideList.forEach((_, i) => {
-                const dot = document.createElement("div");
-                dot.className = "dot" + (i === 0 ? " active" : "");
-                dot.addEventListener("click", () => showSlide(i));
-                dotsContainer.appendChild(dot);
-            });
-            const dots = dotsContainer.querySelectorAll(".dot");
-
-            const showSlide = (i) => {
-                index = i;
-                slides.style.transform = `translateX(-${i * 100}%)`;
-                dots.forEach(d => d.classList.remove("active"));
-                dots[i]?.classList.add("active");
-            };
-
-            setInterval(() => showSlide((index + 1) % slideList.length), 5000);
-        };
-
-        initSlider("slider-web");
-        initSlider("slider-app");
-
-
-        /* ---------------- Section02 Drag Handle ---------------- */
-        const bar = document.querySelector('.handlebar');
-        const frame = document.querySelector('.responsive-demo');
-        if (bar && frame) {
-            let dragging = false;
-            bar.addEventListener('mousedown', () => dragging = true);
-            document.addEventListener('mouseup', () => dragging = false);
-            document.addEventListener('mousemove', (e) => {
-                if (!dragging) return;
-                const rect = frame.getBoundingClientRect();
-                let newWidth = Math.max(250, Math.min(e.clientX - rect.left, 900));
-                frame.style.width = `${newWidth}px`;
-                bar.style.right = `-${bar.offsetWidth / 2}px`;
-            });
-        }
-
-        /* ---------------- Section03 Form Toast ---------------- */
-        const form = document.querySelector("form");
-        const toast = document.getElementById("toast");
-        form && toast && form.addEventListener("submit", e => {
-            e.preventDefault();
-            toast.classList.add("show");
-            setTimeout(() => toast.classList.remove("show"), 3000);
-        });
-
-        /* ---------------- Section06 Email Copy ---------------- */
-        const emailLink = document.getElementById('emailLink');
-        const tooltip = document.getElementById('tooltip');
-
-        if (emailLink && tooltip) {
-            emailLink.addEventListener('click', e => {
-                e.preventDefault();
-                const email = 'contact.hyejin@gmail.com';
-                navigator.clipboard?.writeText(email).catch(() => fallbackCopy(email)) || fallbackCopy(email);
-
-                tooltip.classList.add('show');
-                setTimeout(() => tooltip.classList.remove('show'), 2000);
-            });
-
-            const fallbackCopy = text => {
-                const tempInput = document.createElement('input');
-                tempInput.value = text;
-                document.body.appendChild(tempInput);
-                tempInput.select();
-                document.execCommand('copy');
-                document.body.removeChild(tempInput);
-            };
-        }
-
     });
 
-    /* ---------------- Modal open, close ---------------- */
-    function openModal(id) { 
-        var modal = document.getElementById(id); 
-        modal.style.display = 'block'; 
-        document.body.style.overflow = 'hidden'; 
-    } 
-    function closeModal(id) { 
-        var modal = document.getElementById(id); 
-        modal.style.display = 'none'; 
-        document.body.style.overflow = ''; 
-    }
-    
-    document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-tab]').forEach(tabRoot => {
-        const buttons = tabRoot.querySelectorAll('[data-tab-button]');
-        const panels = tabRoot.querySelectorAll('.modal-tab-panel');
+    // 3. 상세 보기 닫기 함수
+    const closeDetail = () => {
+        detailBg.classList.replace('opacity-100', 'opacity-0');
+        detailContent.classList.add('translate-y-20', 'opacity-0');
+        setTimeout(() => {
+            detailLayer.classList.add('hidden');
+            // 만약 아카이브 레이어가 열려있지 않을 때만 스크롤 복구
+            if (document.getElementById('archive-layer').classList.contains('hidden')) {
+                document.body.style.overflow = '';
+            }
+        }, 500);
+    };
 
-        buttons.forEach((button, index) => {
-        button.addEventListener('click', () => activateTab(button));
+    if(closeBtn) closeBtn.onclick = closeDetail;
+    if(detailBg) detailBg.onclick = closeDetail;
 
-        button.addEventListener('keydown', e => {
-            if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-            e.preventDefault();
+    ////// email copy
+    const emailLink = document.getElementById('emailLink');
+    const tooltip = document.getElementById('tooltip');
 
-            const nextIndex =
-                e.key === 'ArrowRight'
-                ? (index + 1) % buttons.length
-                : (index - 1 + buttons.length) % buttons.length;
+    if (emailLink && tooltip) {
+        emailLink.addEventListener('click', function(e) {
+            // 1. 기본 메일 앱 실행 방지 (클릭 시 복사만 원할 경우)
+            e.preventDefault(); 
+            
+            const email = 'contact.hyejin@gmail.com';
 
-            buttons[nextIndex].focus();
-            activateTab(buttons[nextIndex]);
+            // 2. 복사 기능 실행
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(email).then(() => {
+                    showTooltip();
+                }).catch(err => {
+                    console.error('Copy failed', err);
+                    fallbackCopy(email);
+                });
+            } else {
+                fallbackCopy(email);
             }
         });
-        });
 
-        function activateTab(activeButton) {
-        const targetId = activeButton.getAttribute('aria-controls');
-        const targetPanel = tabRoot.querySelector(`#${targetId}`);
-
-        buttons.forEach(btn => {
-            btn.classList.remove('is-active');
-            btn.setAttribute('aria-selected', 'false');
-        });
-
-        panels.forEach(panel => {
-            panel.classList.remove('is-active');
-            panel.hidden = true;
-        });
-
-        activeButton.classList.add('is-active');
-        activeButton.setAttribute('aria-selected', 'true');
-
-        targetPanel.hidden = false;
-        targetPanel.classList.add('is-active');
-        targetPanel.focus();
+        function showTooltip() {
+            tooltip.style.opacity = '1';
+            setTimeout(() => {
+                tooltip.style.opacity = '0';
+            }, 2000);
         }
+
+        function fallbackCopy(text) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand('copy');
+                showTooltip();
+            } catch (err) {
+                alert('이메일 복사에 실패했습니다.');
+            }
+            document.body.removeChild(tempInput);
+        }
+    }
+});
+
+    // 4. 커리어 아카이브 제어 함수 (전역 범위)
+    // 버튼의 onclick="openArchive()"에서 접근할 수 있도록 바깥에 둡니다.
+    function openArchive() { 
+        const archive = document.getElementById('archive-layer');
+        archive.classList.remove('hidden'); 
+        document.body.style.overflow = 'hidden'; 
+    }
+
+    function closeArchive() { 
+        const archive = document.getElementById('archive-layer');
+        archive.classList.add('hidden'); 
+        // 상세 페이지 레이어가 닫혀있을 때만 스크롤 복구
+        if (document.getElementById('project-detail-layer').classList.contains('hidden')) {
+            document.body.style.overflow = '';
+        }
+    }
+
+    ////// project filter
+    document.addEventListener('DOMContentLoaded', () => {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.dataset.filter;
+
+                // 1. 버튼 활성 상태 스타일 즉시 변경
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-primary', 'text-white', 'active');
+                });
+                btn.classList.add('bg-primary', 'text-white', 'active');
+
+                // 2. 필터링 로직 (더 빠르고 가볍게)
+                projectItems.forEach(item => {
+                    const isShow = filter === 'all' || item.dataset.category === filter;
+
+                    if (isShow) {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                        item.style.pointerEvents = 'auto'; // 클릭 가능
+                    } else {
+                        item.style.opacity = '0.1'; // 아예 안보이게 하려면 0, 흐릿하게는 0.1
+                        item.style.transform = 'scale(0.98)'; // 아주 살짝 작아짐
+                        item.style.pointerEvents = 'none'; // 클릭 방지
+                    }
+                });
+            });
+        });
     });
+
+    ////// nav
+    document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section[id]'); // ID가 있는 모든 섹션 감지
+
+        const options = {
+            root: null,
+            rootMargin: '-10% 0px -80% 0px', // 화면 중간쯤 왔을 때 활성화되도록 마진 조절
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    
+                    // 모든 링크에서 text-primary 제거
+                    navLinks.forEach(link => {
+                        link.classList.remove('text-primary');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            // 현재 섹션에 해당하는 링크에만 추가
+                            link.classList.add('text-primary');
+                        }
+                    });
+                }
+            });
+        }, options);
+
+        sections.forEach(section => observer.observe(section));
     });
 
 
-    </script>
+</script>
 
-
-</body>
-</html>
+</body></html>
